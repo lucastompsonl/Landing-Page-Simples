@@ -4,19 +4,19 @@ document.getElementById('signup-form').addEventListener('submit', function (even
     var email = document.getElementById('email').value;
 
     if (name.trim() === '' || email.trim() === '') {
-        showMessage('Please fill in all fields.');
+        showMessage('Por favor, preencha todos os campos.');
     } else if (!isValidEmail(email)) {
-        showMessage('Please enter a valid email address.');
+        showMessage('Por favor, insira um email válido.');
     } else {
-        showMessage('Thank you for signing up, ' + name + '!');
-        // Aqui você pode adicionar código para enviar os dados do formulário para o servidor
-        // Ou qualquer outra ação desejada após o envio do formulário bem-sucedido
+        showMessage('Obrigado por inscrever-se, ' + name + '!');
+        // código para enviar os dados do formulário para o servidor
+        // Ou outra ação após o envio do formulário bem-sucedido
         document.getElementById('signup-form').reset();
     }
 });
 
 function isValidEmail(email) {
-    // Esta é uma validação básica de email, você pode usar uma expressão regular mais complexa se desejar
+    // validação básica de email
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
